@@ -1,0 +1,71 @@
+name: Build & Deploy KB to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare static site
+        run: |
+          set -e
+          mkdir -p _site
+          # Copy EXACT folder (quotes handle spaces/&)
+          cp -r "HTML/HighLevel Branded"/* _site/ || true
+          touch _site/.nojekyll
+
+          # If no index exists, create a simple directory landing page
+          if [ ! -f "_site/index.html" ] && [ ! -f "_site/Index.html" ]; then
+            python3 - <<'PY'
+import os, html, urllib.parse
+root = "_site"
+items = [d for d in os.listdir(root) if os.path.isdir(os.path.join(root,d))]
+items.sort(key=lambda s: s.lower())
+def enc(p): return urllib.parse.quote(p)
+with open(os.path.join(root,"index.html"), "w", encoding="utf-8") as f:
+    f.write("<!doctype html><meta charset='utf-8'>")
+    f.write("<title>Knowledge Base</title>")
+    f.write("<h1>Knowledge Base</h1><p>Select a category:</p><ul>")
+    for d in items:
+        f.write(f"<li><a href='{enc(d)}/'>{html.escape(d)}</a></li>")
+    f.write("</ul>")
+PY
+          fi
+
+          echo "---- PUBLISHING THESE FILES ----"
+          ls -la _site
+          echo "--------------------------------"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
