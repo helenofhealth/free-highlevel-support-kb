@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Turn Videos Into Minimized Sticky Videos Upon Scroll</title>
+  
+  <!-- Standard Meta Tags -->
+  <meta name="title" content="Turn Videos Into Minimized Sticky Videos Upon Scroll">
+  <meta name="description" content="      Example Java/HTML Code:      &lt;style&gt;
+ .test
+ {
+ position: fixed !important;
+ top: 0 !important;
+ left: 0 !important;;
+ right: 0 !important;;
+  z-index:999 !important;
+  width:300px !important;
+  height:200px !important;
+ }
+&lt;/style&gt;
+&lt;script&gt;
+...">
+  <meta name="keywords" content="floating video,  sticky video">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Turn Videos Into Minimized Sticky Videos Upon Scroll">
+  <meta property="og:description" content="      Example Java/HTML Code:      &lt;style&gt;
+ .test
+ {
+ position: fixed !important;
+ top: 0 !important;
+ left: 0 !important;;
+ right: 0 !important;;
+  z-index:999 !important;
+  width:300px !important;
+  height:200px !important;
+ }
+&lt;/style&gt;
+&lt;script&gt;
+...">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://help.gohighlevel.com/support/solutions/articles/48001180906-turn-videos-into-minimized-sticky-videos-upon-scroll">
+</head>
+<body>
+  <div class="date_updated">
+    <p><strong>Date Updated:</strong> 2021-04-16T21:56:41.000Z</p>
+  </div>
+  <div class="container">
+    <p><span class="fr-video fr-deletable fr-fvc fr-dvb fr-draggable"><iframe width="640" height="360" src="https://www.youtube.com/embed/wSnomhkFysU?&amp;wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable" sandbox="allow-scripts allow-forms allow-same-origin allow-presentation"></iframe></span></p><p><br></p><p dir="ltr">Example Java/HTML Code:</p><p dir="ltr"><br></p><div><div class="code-toolbar"><pre contenteditable="false" data-code-brush="Html" rel="highlighter" class="language-html line-numbers" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+ <span class="token selector"><span class="token class">.test</span></span>
+ <span class="token punctuation">{</span>
+ <span class="token property">position</span><span class="token punctuation">:</span> fixed <span class="token important">!important</span><span class="token punctuation">;</span>
+ <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+ <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+ <span class="token property">right</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span><span class="token number">999</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">300</span><span class="token unit">px</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span><span class="token number">200</span><span class="token unit">px</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+window<span class="token punctuation">.</span><span class="token function-variable function">onscroll</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>scrollTop <span class="token operator">&gt;</span> <span class="token number">90</span> <span class="token operator">||</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>scrollTop <span class="token operator">&gt;</span> <span class="token number">90</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"video-PUTHERETHECSSVIDEOSELECTORCODE"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">"test"</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"video-PUTHERETHECSSVIDEOSELECTORCODE"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><div class="toolbar"><div class="toolbar-item"><span>HTML</span></div></div></div><p><br></p></div><p dir="ltr">Example CSS:</p><p dir="ltr"><br></p><div><div class="code-toolbar"><pre contenteditable="false" data-code-brush="Html" rel="highlighter" class="language-html line-numbers" tabindex="0"><code class="language-html">#video-PUTHERETHECSSVIDEOSELECTORCODE {
+ float: left;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><div class="toolbar"><div class="toolbar-item"><span>HTML</span></div></div></div><p><br></p></div>
+            
+
+<script type="text/javascript">
+  const attachment_error_image = (attachment) => {
+    const parentElement = attachment.parentElement;
+    const defaultIcon = `<span class="icon-file-empty"></span><span class="fw-attachment-ext">${attachment.dataset.extension}</span>`;
+    parentElement.innerHTML = defaultIcon;
+  };
+</script>
+  </div>
+</body>
+</html>

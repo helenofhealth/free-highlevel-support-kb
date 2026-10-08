@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Workflow Action - Update an Associated Record for Contact</title>
+  
+  <!-- Standard Meta Tags -->
+  <meta name="title" content="Workflow Action - Update an Associated Record for Contact">
+  <meta name="description" content=" TABLE OF CONTENTS      Overview  Action Name  Action Description  Action Details  Example: Tracking Remaining Slots for a Trip     IMPORTANT: Due to Custom Objects only being available on the $497 plan, this workflow action can only be seen on th...">
+  <meta name="keywords" content="HighLevel CRM, Update Associated Record, associated record for contact, custom objects, association label, workflow action, update custom object record, all associated records, merge fields, custom values, service history update, warranty tracking, Last Service Date, Create an Associated Record, HighLevel workflows, subaccount custom objects, automate contact-associated records, append service details, association label selection, contact-linked objects">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Workflow Action - Update an Associated Record for Contact">
+  <meta property="og:description" content=" TABLE OF CONTENTS      Overview  Action Name  Action Description  Action Details  Example: Tracking Remaining Slots for a Trip     IMPORTANT: Due to Custom Objects only being available on the $497 plan, this workflow action can only be seen on th...">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://help.gohighlevel.com/support/solutions/articles/155000004588-workflow-action-update-an-associated-record-for-contact">
+</head>
+<body>
+  <div class="date_updated">
+    <p><strong>Date Updated:</strong> 2025-05-16T18:29:03.000Z</p>
+  </div>
+  <div class="container">
+    <p class="fd-toc"><strong>TABLE OF CONTENTS</strong></p><p><br></p><ul><li><a href="#Overview">Overview</a></li><li><a href="#Action-Name">Action Name</a></li><li><a href="#Action-Description">Action Description</a></li><li><a href="#Action-Details">Action Details</a></li><li><a href="#Example%3A-Tracking-Remaining-Slots-for-a-Trip">Example: Tracking Remaining Slots for a Trip</a></li></ul><hr><h3><pre class="fd-callout fd-callout--note" dir="ltr"><strong><span style="color: rgb(184, 49, 47); font-family: &quot;Helvetica Neue&quot;;">IMPORTANT</span></strong><span style="font-family: Helvetica Neue;">: Due to <strong>Custom Objects only being available on the $497 plan</strong>, this workflow action can only be seen on the 497$ plan.</span></pre><br></h3><h3 id="Overview"><strong>Overview</strong></h3><p dir="ltr">The <strong>Update an Associated Record</strong> action allows users to modify specific fields of a custom object associated with a contact. This ensures that key information remains accurate and up-to-date without manual intervention.</p><hr><h3 id="Action-Name"><strong>Action Name</strong></h3><p><strong dir="ltr">Update Associated Record for Contact</strong></p><hr><h3 id="Action-Description"><strong>Action Description</strong></h3><p><br></p><p><strong dir="ltr"><img src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155041053104/original/i1jCeUn69LXyTgcgnRKn9rEdCkggGSm_tw.png?1738755088" style="width: 245px; max-width: 100%;" class="fr-fil fr-dib fw-lightbox-img" data-attachment="[object Object]" data-id="155041053104" data-index="0"></strong></p><p dir="ltr">This action enables users to update existing custom object records that are associated with a contact. The update can apply to one or multiple records, depending on the<a href="https://help.gohighlevel.com/a/solutions/articles/155000004033?portalId=48000045315">&nbsp;association label selected</a>.</p><hr><h3 id="Action-Details"><strong>Action Details</strong></h3><ul><li dir="ltr">This action is possible only after creating custom objects in the subaccount and creating an association label between at least one of those objects and contacts.</li><li dir="ltr">Updates one or more fields within the selected records.</li><li dir="ltr">Uses <strong><a href="https://help.gohighlevel.com/a/solutions/articles/155000004033?portalId=48000045315">association labels to determine which records should be updated</a></strong> - the user can also choose to update all associated records by selecting "All associated records".</li><li dir="ltr">Users can also use custom value and custom fields - merge fields to add the information to the object record</li></ul><hr><h3 id="Example:-Tracking-Remaining-Slots-for-a-Trip"><strong>Example: Tracking Remaining Slots for a Trip</strong></h3><p>A home appliance company sells products with warranties, and each product has a <strong>Warranty</strong> custom object to track:</p><ul><li><strong>Warranty Start Date</strong></li><li><strong>Warranty Expiry Date</strong></li><li><strong>Service History</strong></li></ul><p>When a product is purchased, the <strong>Warranty Start Date</strong> should be set automatically, and when a warranty claim is made, the <strong>Service History</strong> field should be updated.</p><h4 id="Example-Setup-(For-updating-warranty-information-after-a-service-request)"><strong>Example Setup</strong> (For updating warranty information after a service request)</h4><ol><li><strong>Object to Update</strong> → Warranty</li><li><strong>Association Label</strong> → Purchased Product</li><li><strong>Fields to Update:</strong><ul><li><strong>Service History</strong> → Append service details</li><li><strong>Last Service Date</strong> → Set to today’s date</li></ul></li></ol><h4 id="How-It-Works"><strong>How It Works</strong></h4><ul><li>When a product is purchased, the <strong>Warranty Start Date</strong> is set via the <strong>Create an Associated Record</strong> action.</li><li>If a customer submits a service request, the workflow triggers an <strong>Update Associated Record</strong>action:<ul><li>The <strong>Service History</strong> field is updated with details of the service performed.</li><li>The <strong>Last Service Date</strong> is set to today’s date.</li></ul></li></ul><p dir="ltr">This helps the company maintain an updated service record for each product, ensuring smooth warranty tracking and claims processing.&nbsp;</p>
+            
+
+<script type="text/javascript">
+  const attachment_error_image = (attachment) => {
+    const parentElement = attachment.parentElement;
+    const defaultIcon = `<span class="icon-file-empty"></span><span class="fw-attachment-ext">${attachment.dataset.extension}</span>`;
+    parentElement.innerHTML = defaultIcon;
+  };
+</script>
+  </div>
+</body>
+</html>
